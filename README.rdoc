@@ -1,4 +1,4 @@
-= EventWatcher
+= Marshalable_set_attribute
     http://github.com/zzurang/marshalable_set_attribute
 
 == DESCRIPTION
