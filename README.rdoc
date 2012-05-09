@@ -1,0 +1,27 @@
+= EventWatcher
+    http://github.com/zzurang/marshalable_set_attribute
+
+== DESCRIPTION
+    a ruby module that lets an attribute act as a set and persists with AR
+
+== USAGE
+
+    class Foo < ActiveRecord::Base
+      include MarshalableSetAttribute    
+
+      attr_accessor :permissions    
+      marshalable_set_attribute :permissions
+    end
+
+    foo = Foo.create!
+
+    set = foo.permissions_set
+
+    set.add(Permission::READ)
+    set.add(Permission::WRITE)    
+    set.delete(Permission::READ)
+
+    set.save!
+    
+== TODOs
+    1. Support multiple attributes with attr_accessors [:old_emails, :roles]
